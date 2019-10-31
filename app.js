@@ -111,8 +111,8 @@ function retirerSeconde() {
     var uke = id("uke").firstChild.textContent;
     var suivant = id("suivant").firstChild.textContent;
 
-    speakAuClavier(suivant);
-    speakTuCommandes(tori);
+    speakAuClavier(tori);
+    speakTuCommandes(suivant);
     speakTuSors(uke);
     id("uke").lastChild.textContent = id("tori").firstChild.textContent;
     id("tori").lastChild.textContent = id("suivant").firstChild.textContent;
@@ -186,7 +186,7 @@ function tirageAleatoire_1() {
       id("uke").innerHTML = partis;
       id(participants).classList.add("retourne");
     }
-    speakTuCommandes(partis[0]);
+    speakAuClavier(partis[0]);
   }
   eliminer();
   console.log(participants);
@@ -209,7 +209,7 @@ function tirageAleatoire_2() {
       id(participants).classList.add("retourne");
     }
     console.log(partis);
-    speakAuClavier(partis[0]);
+    speakTuCommandes(partis[0]);
   }
   eliminer();
   console.log(participants);
